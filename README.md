@@ -52,11 +52,6 @@ VERSION
 
 ## Get started
 
-```bash
-git clone https://github.com/aws/aws-mwaa-local-runner.git
-cd aws-mwaa-local-runner
-```
-
 ### Step one: Building the Docker image
 
 Build the Docker container image using the following command:
