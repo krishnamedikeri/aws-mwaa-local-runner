@@ -40,3 +40,15 @@ services:
             retries: 3
         env_file:
             - ./config/.env.localrunner
+
+    spark:
+        image: jupyter/pyspark-notebook:spark-3.3.0
+        platform: linux/arm64
+        environment:
+            JUPYTER_ENABLE_LAB: "yes"
+        ports:
+            - '8888:8888' # Spark notebook port
+            - '4040:4040'
+            - '4041:4041'
+        volumes:
+            - "${PWD}/workspace:/home/jovyan/workspace"
